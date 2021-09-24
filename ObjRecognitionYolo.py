@@ -14,8 +14,8 @@ with open(classesFile, 'rt') as f:
     classNames = f.read().rstrip('n').split('n')
 print(classNames)
 ## Model Files
-modelConfiguration ="C:\Users\oraon\OneDrive\Documents\GitHub\ObjRecognitionYolo\yolov3-320.cfg"
-modelWeights ="C:\Users\oraon\OneDrive\Documents\GitHub\ObjRecognitionYolo\yolov3-320.weights" #C:\Users\oraon\OneDrive\Documents\GitHub\ObjRecognitionYolo\
+modelConfiguration ="cfg\yolov4.cfg"
+modelWeights ="weights\yolov4.weights" #C:\Users\oraon\OneDrive\Documents\GitHub\ObjRecognitionYolo\
 net = cv.dnn.readNetFromDarknet(modelConfiguration, modelWeights)
 net.setPreferableBackend(cv.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv.dnn.DNN_TARGET_CPU)
